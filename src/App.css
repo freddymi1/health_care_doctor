@@ -79,7 +79,6 @@ body.dark-theme {
   background: #1370fb;
   transition: all 0.3s ease;
   cursor: pointer;
-  z-index: 999;
 }
 .nav__btn:hover {
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
@@ -267,6 +266,7 @@ img {
   background: #1370fb;
   z-index: 0;
   filter: blur(200px);
+  display: none;
 }
 
 ._shadowBlock2 {
@@ -351,6 +351,7 @@ img {
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--first-color);
+  z-index: 999;
 }
 
 .nav__close:hover {
@@ -587,7 +588,7 @@ img {
   border-radius: 20px;
   bottom: -6rem;
   right: -1rem;
-  z-index: 999;
+  z-index: 100;
   background: #fff;
 }
 .cardImgAbout .card_AB_H {
@@ -1218,7 +1219,7 @@ img {
   .nav__close,
   .nav__icon,
   .nav__toggle {
-    display: none;
+    display: block;
   }
 
   .nav__logo {
@@ -1233,6 +1234,7 @@ img {
 
   .nav__menu {
     margin: auto;
+    z-index: 999;
   }
   .data_home h1 {
     font-size: 24px !important;
@@ -1307,6 +1309,7 @@ img {
     background: #1370fb;
     z-index: 0;
     filter: blur(200px);
+    display: block;
   }
 
   ._shadowBlock2 {
@@ -2150,5 +2153,13 @@ img {
     font-weight: 500;
     color: #fff;
     font-size: 16px;
+  }
+  .nav__close,
+  .nav__icon,
+  .nav__toggle {
+    display: none;
+  }
+  .nav__btn {
+    z-index: 999;
   }
 }
