@@ -1,5 +1,15 @@
 import React from 'react'
 import {FiChevronRight} from 'react-icons/fi'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// import Swiper core and required modules
+import SwiperCore, {
+    Navigation,Pagination,Mousewheel,Keyboard
+  } from 'swiper/core';
+  
+// install Swiper modules
+SwiperCore.use([Navigation,Pagination,Mousewheel,Keyboard]);
+
 export default function BolgSection(props) {
     return (
         <div className="mainBlogS">
@@ -28,6 +38,7 @@ export default function BolgSection(props) {
                 <div className="blT">
                     <h3>Coming soon:</h3>
                 </div>
+                
                 <div className="imgSwip">
                     <img src={props.blog5} alt="blogImg" />
                     <img src={props.blog6} alt="blogImg" />

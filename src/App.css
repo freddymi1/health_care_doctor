@@ -439,6 +439,10 @@ img {
   padding: 2rem 3rem;
   border-radius: 10px;
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.1);
 }
 .card1 {
   background: #cc792642;
@@ -446,6 +450,10 @@ img {
   padding: 3rem 1rem;
   border-radius: 10px;
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+.card1:hover {
+  transform: scale(1.1);
 }
 .card2 {
   background: #739d1e26;
@@ -453,6 +461,10 @@ img {
   padding: 3rem 1rem;
   border-radius: 10px;
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+.card2:hover {
+  transform: scale(1.1);
 }
 .card3 {
   background: #20bba130;
@@ -460,6 +472,10 @@ img {
   padding: 3rem 1rem;
   border-radius: 10px;
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+.card3:hover {
+  transform: scale(1.1);
 }
 
 .cardContent {
