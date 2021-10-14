@@ -72,7 +72,7 @@ body.dark-theme {
 .section5 {
   align-items: center;
   text-align: center;
-  padding: 4rem;
+  padding: 0rem;
   height: auto;
   margin-top: 0rem;
 }
@@ -523,7 +523,7 @@ img {
 
 /* About me */
 .about_content {
-  padding: 4rem;
+  padding: 2rem;
 }
 .contentAbout {
   display: grid;
@@ -674,7 +674,7 @@ img {
 }
 /* Shedule */
 .shedule_content {
-  padding: 4rem;
+  padding: 2rem;
 }
 .contentShedule {
   display: grid;
@@ -1000,7 +1000,7 @@ img {
 
 .contentBlog {
   display: block;
-  padding: 0 4rem;
+  padding: 0 2rem;
 }
 .tableSection {
   display: block;
