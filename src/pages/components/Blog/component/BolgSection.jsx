@@ -1,14 +1,5 @@
 import React from 'react'
 import {FiChevronRight} from 'react-icons/fi'
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// import Swiper core and required modules
-import SwiperCore, {
-    Navigation,Pagination,Mousewheel,Keyboard
-  } from 'swiper/core';
-  
-// install Swiper modules
-SwiperCore.use([Navigation,Pagination,Mousewheel,Keyboard]);
 
 export default function BolgSection(props) {
     return (
