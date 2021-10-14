@@ -65,6 +65,18 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
 }
 
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 {
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  height: auto;
+  margin-top: 0rem;
+}
+
 .nav__btns {
   display: flex;
   align-items: center;
@@ -584,15 +596,16 @@ img {
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
   padding: 1rem;
   width: 100%;
-  position: absolute;
+  position: relative;
   border-radius: 20px;
-  bottom: -6rem;
-  right: -1rem;
-  z-index: 100;
+  bottom: 0rem;
+  right: 0rem;
+  z-index: 0;
   background: #fff;
+  justify-content: center;
 }
 .cardImgAbout .card_AB_H {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
 }
@@ -739,7 +752,7 @@ img {
 }
 .medicalR {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   gap: 1rem;
   width: 100%;
   margin-top: 1rem;
@@ -759,11 +772,11 @@ img {
 .cardImgShedule {
   box-shadow: rgba(121, 121, 121, 0.623) 0px 5px 15px;
   padding: 1rem;
-  width: 80%;
-  position: absolute;
+  width: 100%;
+  position: relative;
   border-radius: 20px;
-  bottom: -5rem;
-  right: 2rem;
+  bottom: 0rem;
+  right: 0rem;
   z-index: 0;
   background: #fff;
 }
@@ -792,7 +805,7 @@ img {
 .cardABC {
   padding-top: 1rem;
   /* padding-bottom: 1rem; */
-  display: flex;
+  display: block;
   text-align: left;
   align-items: center;
 }
@@ -822,11 +835,11 @@ img {
   top: -10rem;
 }
 .textReview p {
-  font-size: 12px;
+  font-size: 10px;
   color: #031126;
 }
 .pName {
-  top: 6rem;
+  top: 0rem;
   position: absolute;
 }
 .pName h2 {
@@ -851,11 +864,11 @@ img {
   content: "\201d";
   position: absolute;
   font: 4rem/1.4 Georgia, serif;
-  top: 5.5rem;
+  top: 4rem;
   color: rgb(136, 153, 153);
 }
 .pName {
-  top: 2rem;
+  top: 0rem;
   position: relative;
 }
 
@@ -891,7 +904,7 @@ img {
   font-weight: 600;
   font-size: 18px;
   background: #1370fb;
-  width: auto;
+  width: 100%;
 }
 
 .cardBLH {
@@ -990,7 +1003,7 @@ img {
   padding: 0 4rem;
 }
 .tableSection {
-  display: flex;
+  display: block;
   align-items: initial;
   width: 100%;
   margin-top: 1rem;
@@ -1000,7 +1013,7 @@ img {
   font-size: 16px;
   font-weight: 600;
   color: #031126;
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 .tableSection button {
   border: none;
@@ -1008,12 +1021,12 @@ img {
   color: #fc756d;
   font-weight: 600;
   font-size: 14px;
-  margin-left: 1rem;
+  margin-left: 0rem;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 .tableSection button:hover {
@@ -1035,7 +1048,7 @@ img {
 
 .blT h3::after {
   content: "";
-  width: 24%;
+  width: 100%;
   height: 2px;
   background: #fc746d93;
   display: block;
@@ -1181,6 +1194,11 @@ img {
   font-size: 16px;
 }
 @media screen and (min-width: 768px) {
+  .cardImgAbout .card_AB_H {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .home__content {
     display: flex;
     padding: 2rem;
@@ -1310,6 +1328,18 @@ img {
     z-index: 0;
     filter: blur(200px);
     display: block;
+  }
+
+  .cardImgAbout {
+    box-shadow: rgb(121 121 121 / 62%) 0px 5px 15px;
+    padding: 1rem;
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+    bottom: -6rem;
+    right: -1rem;
+    z-index: 100;
+    background: #fff;
   }
 
   ._shadowBlock2 {
