@@ -13,6 +13,8 @@ import BlogPage from './components/Blog/BlogPage'
 // import bg from '../assets/imgs/7 - footer/bg.png'
 import Footer from './Footer/Footer'
 import storage from '../env/firebase'
+import ReactLoading from "react-loading";
+
 export default function MainPage() {
     const [logoh, setLogoh] = useState();
     const [headerImg, setHeaderImg] = useState()
@@ -44,7 +46,7 @@ export default function MainPage() {
     const [footer6, setFooter6] = useState()
     const [footer7, setFooter7] = useState()
 
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         
