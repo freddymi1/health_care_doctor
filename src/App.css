@@ -158,8 +158,8 @@ img {
 /*LAYOUT*/
 
 ._container {
-  max-width: 1024px !important;
   margin: auto;
+  padding: 2rem 0 4rem;
 }
 
 ._grid {
@@ -177,7 +177,6 @@ img {
 }
 
 ._nav {
-  max-width: 968px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -1071,10 +1070,9 @@ img {
 }
 
 .imgSwip {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto auto;
+  display: flex;
   margin-top: 1rem;
+  gap: 10px;
 }
 .footer {
   position: relative;
@@ -1217,10 +1215,10 @@ img {
   }
   .home__content {
     display: flex;
-    padding: 2rem;
+    padding: 4rem;
     align-items: center;
     justify-content: space-around;
-    margin-top: 3rem;
+    margin-top: 0rem;
   }
   .appPage {
     position: relative;
@@ -1248,6 +1246,7 @@ img {
   ._nav {
     height: 4.5rem;
     column-gap: 1rem;
+    align-items: center;
   }
 
   .nav__close,
@@ -1285,7 +1284,7 @@ img {
     text-shadow: 1px 2px 2px #031126;
   }
   .home__img {
-    width: 1200px;
+    width: 1800px;
   }
   ._textHome {
     font-size: 18px;
@@ -2065,9 +2064,8 @@ img {
   }
 
   .imgSwip {
-    display: grid;
+    display: flex;
     gap: 10px;
-    grid-template-columns: auto auto;
     margin-top: 1rem;
   }
   .footer {

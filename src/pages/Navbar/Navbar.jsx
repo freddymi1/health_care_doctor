@@ -15,7 +15,7 @@ export default function NavBar(props) {
     const navLink = document.querySelectorAll(".nav__link")
 
     const navLinkMenu = () => {
-        const navMenu = document.getElementById('nav-menu');
+        // const navMenu = document.getElementById('nav-menu');
         setIsOpen(false)
         navMenu.classList.remove('show__menu')
     }
@@ -36,22 +36,25 @@ export default function NavBar(props) {
     if(isOpen){
         navMenu.classList.add('show__menu')
     }
-
-    const detectScroll = ()=>{
-        const scrollUp = document.getElementById("header")
-        if(window.scrollY >= 80){
-            scrollUp.classList.add("headB")
-        }else{
-            scrollUp.classList.remove("headB")
+    window.addEventListener("scroll", ()=>{
+        const detectScroll = ()=>{
+            const scrollUp = document.getElementById("header")
+            if(window.scrollY >= 80){
+                scrollUp.classList.add("headB")
+            }else{
+                scrollUp.classList.remove("headB")
+            }
         }
-    }
+    
+        window.addEventListener('scroll', detectScroll)
+    });
 
-    window.addEventListener('scroll', detectScroll)
+    
     
 
     return(
         <header className="header" id="header">
-            <nav className="_nav _container">
+            <nav className="_nav _containerN">
                 <HashLink to="#" className="nav__logo">
                     <img src={props.logo} alt="" />
                 </HashLink>

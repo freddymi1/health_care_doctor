@@ -83,12 +83,16 @@ export default function MainPage() {
     
     // Fetch all image to home and navbar
     const fetchImagesLogo = async () => {
+        setLoading(true)
         await storage.ref('header/logo.png').getDownloadURL().then((res)=>{
+            setLoading(false)
             setLogoh(res);
         });
     };
     const fetchImagesH = async () => {
+        setLoading(true)
         await storage.ref('header/header.png').getDownloadURL().then((res)=>{
+            setLoading(false)
             setHeaderImg(res);
         });
     };
@@ -255,21 +259,29 @@ export default function MainPage() {
     }
 
     //Detect on scroll
-    const detectScroll = ()=>{
-        const scrollUp = document.getElementById("scroll-up")
-        if(window.scrollY >= 560){
-            scrollUp.classList.add("show__scrollUp")
-        }else{
-            scrollUp.classList.remove("show__scrollUp")
-        }
-    }
 
-    window.addEventListener('scroll', detectScroll)
+    window.addEventListener("scroll", ()=>{
+        const detectScroll = ()=>{
+            const scrollUp = document.querySelector("#scroll-up")
+            if(window.scrollY >= 560){
+                scrollUp.classList.add("show__scrollUp")
+            }else{
+                scrollUp.classList.remove("show__scrollUp")
+            }
+        }
+        window.addEventListener('scroll', detectScroll)
+    });
+    
+
+    
 
     return (
         <div>
-             
-             <div className="appPage">
+            {
+                loading ? <ReactLoading type="spinningBubbles" color="blue" height={'20%'} width={'20%'} />
+                :
+                <>
+                    <div className="appPage">
                 <NavBar logo={logoh}/>
                 <main className="main">
                     <section className="home section" id="home">
@@ -312,6 +324,9 @@ export default function MainPage() {
             <a href="#home" className="scrollup" id="scroll-up">
                 <FaArrowUp className="scrollup__icon"/>
             </a>
+                </>
+            }
+            
         </div>
     )
 }
